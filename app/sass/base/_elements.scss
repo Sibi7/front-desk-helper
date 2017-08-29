@@ -1,0 +1,9 @@
+button{
+  border: none;
+  cursor: pointer;
+  transition: 200ms ease;
+  &:hover{
+    transform: scale(1.05);
+    transition: 200ms ease;
+  }
+}
