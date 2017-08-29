@@ -1,0 +1,51 @@
+.services {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  &__wrapper {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    &__absolute {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      transform: rotate(-90deg);
+    }
+    h1 {
+      color: #282828;
+      font-family: $gilroyBold;
+      font-size: 36px;
+      margin-top: 0;
+      margin-bottom: 41px;
+      &:before {
+        content: "";
+        width: 2px;
+        height: 30px;
+        background: #16659e;
+        position: absolute;
+        top: -45px;
+        left: 50%;
+      }
+    }
+    p {
+      width: 1096px;
+      margin-left: 70px;
+      font-family: $gilroySemmiB;
+      font-size: 16px;
+      margin-top: 0;
+      line-height: 26px;
+      color: #282828;
+      font-weight: 500;
+      margin-bottom: 74px;
+      span {
+        color: #1066a4;
+        font-family: $gilroyBold;
+      }
+
+    }
+  }
+
+}
