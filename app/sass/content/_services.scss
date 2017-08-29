@@ -13,6 +13,19 @@
       left: 20px;
       top: 0;
       transform: rotate(-90deg);
+      color: #b5b5b5;
+      font-family: $gilroySemmiB;
+      font-size: 16px;
+      text-transform: uppercase;
+      &:before{
+        width: 30px;
+        height: 1px;
+        background-color: #e7e7e7;
+        content: '';
+        left: -46px;
+        position: absolute;
+        top: 10px;
+      }
     }
     h1 {
       color: #282828;
@@ -31,7 +44,7 @@
       }
     }
     p {
-      width: 1096px;
+      width: 1100px;
       margin-left: 70px;
       font-family: $gilroySemmiB;
       font-size: 16px;
@@ -40,11 +53,65 @@
       color: #282828;
       font-weight: 500;
       margin-bottom: 74px;
-      span {
+      a {
         color: #1066a4;
         font-family: $gilroyBold;
       }
 
+    }
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 49px;
+    color: #1066a4;
+    font-family: $gilroySemmiB;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+  &__wrap {
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    &__item {
+      display: block;
+      position: relative;
+      float: left;
+      width: 190px;
+      height: 190px;
+      transition: 200ms ease;
+      cursor: pointer;
+      text-align: center;
+      margin-bottom: 136px;
+      &:hover {
+        box-shadow: 0 0 20px rgba(34, 34, 34, 0.07);
+        background-color: #ffffff;
+        transition: 200ms ease;
+      }
+      img {
+        width: 55px;
+        object-fit: cover;
+        display: inline-block;
+        margin-top: 18px;
+        margin-bottom: 18px;
+        &:after {
+          position: relative;
+          content: '';
+          width: 30px;
+          height: 1px;
+          background-color: #2c4058;
+          bottom: -18px;
+        }
+      }
+      span{
+        display: inline-block;
+        width: 132px;
+        color: #282828;
+        font-family: $gilroyMedium;
+        font-size: 15px;
+        line-height: 20px;
+      }
     }
   }
 

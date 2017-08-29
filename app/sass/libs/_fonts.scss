@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 $gilroyLight:'GilroyLight';
 $gilroyReg:'Gilroy-Regular';
-$gilroySemmiB:'Gilroy-Medium';
+$gilroyMedium:'Gilroy-Medium';
 $gilroyBold:'Gilroy-Bold';
+$gilroySemmiB:'Gilroy-Semibold';
 
 @font-face {
   font-family: 'GilroyLight';
@@ -37,6 +38,15 @@ $gilroyBold:'Gilroy-Bold';
   src: local('☺'), url('../fonts/Gilroy/Gilroy-Bold.woff')
   format('woff'), url('../fonts/Gilroy/Gilroy-Bold.ttf')
   format('truetype'), url('../fonts/Gilroy/Gilroy-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy-Semibold';
+  src: url('../fonts/Gilroy/Gilroy-Semibold.eot');
+  src: local('☺'), url('../fonts/Gilroy/Gilroy-Semibold.woff')
+  format('woff'), url('../fonts/Gilroy/Gilroy-Semibold.ttf')
+  format('truetype'), url('../fonts/Gilroy/Gilroy-Semibold.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
