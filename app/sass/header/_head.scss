@@ -1,0 +1,94 @@
+.head{
+  background: url("../img/head-bg.png") no-repeat center center;
+  background-size: cover;
+  box-sizing: border-box;
+  margin-right: -15px;
+  margin-left: -15px;
+  &__menu{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 2, .5);
+    &__logo{
+      display: block;
+      position: relative;
+      float: left;
+      img{
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    ul{
+      margin: 0;
+      padding:0;
+      display: block;
+      position: relative;
+      float: left;
+      list-style: none;
+      li{
+        display: inline-block;
+        margin: 0 15px;
+        a{
+          color: #ffffff;
+          font-family: $gilroyReg;
+          font-size: 15px;
+          line-height: inherit;
+          display: inline-block;
+          margin-top: 10px;
+        }
+      }
+    }
+    button{
+      display: block;
+      position: relative;
+      float: left;
+      width: 116px;
+      height: 33px;
+      box-shadow: 6px 4px 10px rgba(50, 50, 50, 0.59);
+      border-radius: 16px;
+      background-color: #0169b4;
+      border: 0;
+      cursor: pointer;
+      color: #fff;
+      line-height: 33px;
+      font-family: $gilroySemmiB;
+      font-size: 15px;
+      text-transform: uppercase;
+      transition: 200ms ease;
+      &:hover{
+        transform: scale(1.05);
+        transition: 200ms ease;
+      }
+    }
+  }
+  &__preload{
+    height: 3px;
+    background-color: #0169b4;
+    display: block;
+    position: relative;
+    float: left;
+    width: 15%;
+  }
+  h1{
+    margin-top: 151px;
+    text-shadow: 0 0 70px rgba(71, 93, 155, 0.41);
+    color: #ffffff;
+    font-family: $gilroySemmiB;
+    font-size: 54px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    span{
+      font-family: $gilroyBold;
+    }
+  }
+  p{
+    text-shadow: 0 0 10px rgba(50, 50, 50, 0.65);
+    color: #ffffff;
+    font-family: $gilroyReg;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 15px;
+  }
+}
