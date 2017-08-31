@@ -42,6 +42,15 @@
     text-align: center;
     max-width: 800px;
     margin: 50px auto;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 30px;
+      width: 2px;
+      left: 50%;
+      background-color: #0868ad;
+    }
     span {
       color: #0868ad;
     }
