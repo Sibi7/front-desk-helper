@@ -5,24 +5,65 @@
   width: 100%;
   background: url("../img/mid-bg.png") no-repeat center center;
   background-size: cover;
+  padding: 100px 0;
   &__absolute {
     transform: rotate(-90deg);
     position: absolute;
     left: -20px;
-    top: 0;
+    top: 20px;
     color: #ffffff;
     font-family: $gilroyBold;
     font-size: 16px;
     font-weight: 600;
     line-height: 57px;
     text-transform: uppercase;
+    &:before {
+      width: 30px;
+      height: 1px;
+      background-color: #e7e7e7;
+      content: "";
+      left: -46px;
+      position: absolute;
+      top: 28px;
+    }
   }
   h2 {
+    position: relative;
     text-align: center;
     color: #ffffff;
     font-family: $gilroyBold;
     font-size: 36px;
     font-weight: 700;
     line-height: 57px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+  h3 {
+    position: relative;
+    float: left;
+    font-family:$gilroyBold;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 50%;
+    clear: both;
+    padding: 0;
+  }
+  p {
+    position: relative;
+    float: left;
+    clear: both;
+    width: 50%;
+    font-family:$gilroyReg;
+    font-size: 16px;
+    color: #fff;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    &:last-of-type {
+      font-family:$gilroyBold;
+      font-size: 18px;
+      margin-bottom: 45px;
+    }
   }
 }
