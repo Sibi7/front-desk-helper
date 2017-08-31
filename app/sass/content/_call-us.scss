@@ -1,0 +1,91 @@
+.call-us {
+  position: relative;
+  width: 100%;
+  float: left;
+  padding: 70px 0;
+  >img {
+    display: block;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 535px;
+    @include breakpoint(max-width 1200px) {
+      width: 380px;
+    }
+  }
+  &__absolute {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -80px;
+    top: 40px;
+    color: #b5b5b5;
+    font-family: $gilroyBold;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 57px;
+    text-transform: uppercase;
+    &:before {
+      width: 30px;
+      height: 1px;
+      background-color: #b5b5b5;
+      content: "";
+      left: -46px;
+      position: absolute;
+      top: 28px;
+    }
+  }
+  h2 {
+    font-family: $gilroyBold;
+    font-weight: 800;
+    font-size: 36px;
+    color: #282828;
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+    span {
+      color: #0868ad;
+    }
+  }
+  p {
+    font-family:$gilroyReg;
+    font-size: 16px;
+    color: #282828;
+    text-align: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 710px;
+    float: right;
+    position: relative;
+    clear: both;
+    &:last-of-type {
+      max-width: 460px;
+    }
+  }
+  h3 {
+    font-family:$gilroyBold;
+    font-size: 20px;
+    color: #0868ad;
+    text-transform: uppercase;
+    float: right;
+    clear: both;
+  }
+  a {
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 15px 70px;
+    box-sizing: border-box;
+    display: inline-block;
+    color: #fff;
+    background-color: #0269b3;
+    border-radius: 50px;
+    float: right;
+    clear: both;
+    margin-top: 30px;
+    transition: .2s ease;
+    &:hover {
+      transition: .2s ease;
+      box-shadow: 0 0 18px 2px rgba(2,105,179,.52);
+    }
+  }
+}
