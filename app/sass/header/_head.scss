@@ -5,6 +5,12 @@
   display: block;
   position: relative;
   float: left;
+  @include breakpoint(max-width 992px) {
+    background-position: center right;
+  }
+  @include breakpoint(max-width 500px) {
+    background-position: -100px center;
+  }
   &__menu{
     display: block;
     position: relative;
@@ -12,11 +18,14 @@
     width: 100%;
     padding: 27px 0;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 2, .5);
+    background-color: rgba(0, 0, 2, .7);
     &__logo{
       display: block;
       position: relative;
       float: left;
+      @include breakpoint(max-width 992px) {
+        margin-right: 20px;
+      }
       img{
         object-fit: cover;
         width: 100%;
@@ -29,9 +38,26 @@
       position: relative;
       float: left;
       list-style: none;
-      li{
+      @include breakpoint(max-width 992px) {
+        display: none;
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        left: 0;
+        top: 67px;
+        z-index: 10;
+        padding-bottom: 30px;
+        background-color: rgba(0,0,2,.7);
+      }
+      li {
         display: inline-block;
         margin-right: 30px;
+        @include breakpoint(max-width 992px) {
+          position: relative;
+          width: 100%;
+          text-align: center;
+          padding: 10px 0;
+        }
         a{
           color: #ffffff;
           font-family: $gilroyReg;
@@ -40,6 +66,9 @@
           display: inline-block;
           position: relative;
           margin-top: 9px;
+          @include breakpoint(max-width 992px) {
+            text-shadow: 2px 2px 5px #000;
+          }
           &:before{
             height: 2px;
             background-color: #0169b4;
@@ -78,7 +107,10 @@
       font-size: 15px;
       text-transform: uppercase;
       transition: 200ms ease;
-      &:hover{
+      @include breakpoint(max-width 400px) {
+        display: none;
+      }
+      &:hover {
         transform: scale(1.05);
         transition: 200ms ease;
       }
@@ -101,6 +133,14 @@
     font-size: 54px;
     text-transform: uppercase;
     margin-bottom: 15px;
+    @include breakpoint(max-width 650px) {
+      margin-top: 70px;
+      font-size: 40px;
+    }
+    @include breakpoint(max-width 400px) {
+      margin-top: 50px;
+      font-size: 30px;
+    }
     span{
       font-family: $gilroyBold;
     }
@@ -112,7 +152,10 @@
     font-size: 21px;
     font-weight: 400;
     margin: 15px 0 0 0;
-    width: 650px;
+    max-width: 650px;
+    @include breakpoint(max-width 400px) {
+      font-size: 18px;
+    }
   }
   &__button{
     width: 215px;
@@ -127,5 +170,47 @@
     font-weight: 700;
     margin-bottom: 169px;
   }
-}
 
+  .mobile-menu {
+    display: none;
+    position: relative;
+    float: right;
+    height: 40px;
+    width: 40px;
+    @include breakpoint(max-width 992px) {
+      display: block;
+    }
+    span, span:before, span:after {
+      display: block;
+      height: 2px;
+      width: 18px;
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      margin-left: -9px;
+      top: 50%;
+      margin-top: -1px;
+    }
+    span:before {
+      transition: all 0.2s;
+      margin-top: -6px;
+      content: '';
+    }
+    span:after {
+      transition: all 0.2s;
+      margin-top: 4px;
+      content: '';
+    }
+    &_active span {
+      background-color: transparent;
+      &:before {
+        transform: rotate(135deg);
+        margin-top: 0;
+      }
+      &:after {
+        transform: rotate(-134deg);
+        margin-top: 0;
+      }
+    }
+  }
+}

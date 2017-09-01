@@ -12,6 +12,9 @@
     @include breakpoint(max-width 1200px) {
       width: 380px;
     }
+    @include breakpoint(max-width 830px) {
+      display: none;
+    }
   }
   &__absolute {
     transform: rotate(-90deg);
@@ -24,6 +27,9 @@
     font-weight: 600;
     line-height: 57px;
     text-transform: uppercase;
+    @include breakpoint(max-width 992px) {
+      display: none;
+    }
     &:before {
       width: 30px;
       height: 1px;
@@ -42,6 +48,10 @@
     text-align: center;
     max-width: 800px;
     margin: 50px auto;
+    @include breakpoint(max-width 600px) {
+      margin-top: 0;
+      font-size: 30px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -50,6 +60,9 @@
       width: 2px;
       left: 50%;
       background-color: #0868ad;
+      @include breakpoint(max-width 992px) {
+        top: -50px;
+      }
     }
     span {
       color: #0868ad;
@@ -66,8 +79,17 @@
     float: right;
     position: relative;
     clear: both;
+    @include breakpoint(max-width 830px) {
+      text-align: center;
+      margin: 20px auto;
+    }
     &:last-of-type {
       max-width: 460px;
+      @include breakpoint(max-width 830px) {
+        text-align: center;
+        margin: 20px auto;
+        float: none;
+      }
     }
   }
   h3 {
@@ -77,6 +99,11 @@
     text-transform: uppercase;
     float: right;
     clear: both;
+    @include breakpoint(max-width 830px) {
+      text-align: center;
+      margin: 20px auto;
+      float: none;
+    }
   }
   a {
     font-family: Lato, sans-serif;
@@ -92,6 +119,13 @@
     clear: both;
     margin-top: 30px;
     transition: .2s ease;
+    @include breakpoint(max-width 830px) {
+      display: block;
+      width: 215px;
+      text-align: center;
+      margin: 20px auto;
+      float: none;
+    }
     &:hover {
       transition: .2s ease;
       box-shadow: 0 0 18px 2px rgba(2,105,179,.52);

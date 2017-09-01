@@ -16,24 +16,42 @@
     box-sizing: border-box;
     background-image: linear-gradient(45deg, #0269b3 0%, #24628f 100%);
     margin-left: 70px;
-    h2{
+    @include breakpoint(max-width 1200px) {
+      top: 0;
+      width: 100%;
+      margin-left: 0;
+    }
+    @include breakpoint(max-width 992px) {
+      margin-bottom: 0;
+      height: auto;
+    }
+    h2 {
       color: #ffffff;
       font-family: $gilroyBold;
       font-size: 24px;
       text-transform: uppercase;
-      width: 378px;
+      max-width: 378px;
       margin-top: 0;
       margin-bottom: 30px;
+      @include breakpoint(max-width 992px) {
+        margin: 0 auto 30px;
+      }
+      @include breakpoint(max-width 992px) {
+        font-size: 20px;
+      }
     }
     p{
       margin-top: 0;
       margin-bottom: 30px;
-      width: 400px;
+      max-width: 400px;
       color: #ffffff;
       font-family: $gilroyLight;
       font-size: 14px;
       font-weight: 300;
       line-height: 20px;
+      @include breakpoint(max-width 992px) {
+        margin: 0 auto 30px;
+      }
     }
   }
   &__block-right{
@@ -45,6 +63,18 @@
     right: 36px;
     top: -95px;
     cursor: pointer;
+    @include breakpoint(max-width 1200px) {
+      top: 50px;
+      right: 30px;
+      width: 400px;
+    }
+    @include breakpoint(max-width 992px) {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
     img{
       width: 100%;
       object-fit: cover;

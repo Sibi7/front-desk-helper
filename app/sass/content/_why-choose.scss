@@ -6,6 +6,13 @@
   background: url("../img/mid-bg.png") no-repeat center center;
   background-size: cover;
   padding: 100px 0;
+  @include breakpoint(max-width 992px) {
+    background: url("../img/mid-bg.png") no-repeat left center;
+  }
+  @include breakpoint(max-width 400px) {
+    padding: 60px 0 60px;
+    background-size: auto 100%;
+  }
   &__absolute {
     transform: rotate(-90deg);
     position: absolute;
@@ -17,6 +24,9 @@
     font-weight: 600;
     line-height: 57px;
     text-transform: uppercase;
+    @include breakpoint(max-width 992px) {
+      display: none;
+    }
     &:before {
       width: 30px;
       height: 1px;
@@ -37,6 +47,18 @@
     line-height: 57px;
     margin-top: 40px;
     margin-bottom: 70px;
+    @include breakpoint(max-width 992px) {
+      margin: 30px 40px;
+    }
+    &:before {
+      content: "";
+      width: 2px;
+      height: 30px;
+      background: #fff;
+      position: absolute;
+      top: -45px;
+      left: 50%;
+    }
   }
   h3 {
     position: relative;
@@ -48,6 +70,9 @@
     width: 50%;
     clear: both;
     padding: 0;
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
   }
   p {
     position: relative;
@@ -60,6 +85,9 @@
     padding: 0;
     margin-top: 10px;
     margin-bottom: 10px;
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
     &:last-of-type {
       font-family:$gilroyBold;
       font-size: 18px;
